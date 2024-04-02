@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int reverseNumber(int num) {
+    int reversedNum = 0;
+    while (num > 0) {
+        reversedNum = reversedNum * 10 + num % 10;
+        num /= 10;
+    }
+    return reversedNum;
+}
+
+int main() {
+    int number = 12345;
+    int reversed = reverseNumber(number);
+    cout << "Original Number: " << number << endl;
+    cout << "Reversed Number: " << reversed << endl;
+    return 0;
+}
